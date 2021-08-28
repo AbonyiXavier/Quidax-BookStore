@@ -1,4 +1,7 @@
 # Quidax-BookStore
+[![Build Status](https://app.travis-ci.com/AbonyiXavier/Quidax-BookStore.svg?branch=main)](https://app.travis-ci.com/AbonyiXavier/Quidax-BookStore)
+
+[![Coverage Status](https://coveralls.io/repos/github/AbonyiXavier/Quidax-BookStore/badge.svg?branch=main)](https://coveralls.io/github/AbonyiXavier/Quidax-BookStore?branch=main)
 
 Web app to purchase book. It is built on top of NodeJS and Express. It is higly flexible because it provides users with opportunity to:
 
