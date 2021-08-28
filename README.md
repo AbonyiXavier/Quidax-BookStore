@@ -53,7 +53,7 @@ You must have
 - Mongoose (ODM)
 - AWS s3 bucket
 - Coveralls
-
+- Travis CI
 ## Author
 
 - AbonyiXavier
