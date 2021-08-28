@@ -71,6 +71,22 @@ let bookId;
       done();
   });
 
+  it('It should update book', ( done ) => {
+    const result =  chai.request(server)
+      .put(`${url}/books/${bookId}`)
+      .set('Authorization', accessToken)
+      .set('content-type', 'multipart/form-data')
+      .field('title', 'magic book updated')
+      .field('description', 'best description')
+      .field('author', 'XAvier Francis')
+      .field('author_year', '2020')
+      .field('price', 3000)
+      .field('genere', 'love')
+      .field('stockQuantity', 2)
+      .attach('photo', fs.readFileSync(`${__dirname}/carbon.png`), 'test/controllers/carbon.png')
+      done();
+  });
+
   it('It should fetch a book', async() => {
     const result = await chai.request(server)
       .get(`${url}/books/${bookId}`)
@@ -117,7 +133,5 @@ let bookId;
       })
       expect(result.body.message).to.be.equal('Book added successfully');
   });
-
-
   });
 
