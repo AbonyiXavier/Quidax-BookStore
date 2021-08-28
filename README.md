@@ -45,6 +45,15 @@ You must have
 - Open any restful client application initially installed
 - Select the appropriate http method. Either GET, POST, PUT, PATCH
 
+# Assumption
+
+- All APIs Endpoint have been protected to mirror real life situation
+- No users as a role of admin
+
+# Improvement
+
+- Use of Redis to store carts.
+
 ## Built With
 
 - NodeJs

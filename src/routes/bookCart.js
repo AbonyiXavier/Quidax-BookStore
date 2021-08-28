@@ -2,7 +2,7 @@ import { Router } from "express";
 import bookCartController from "../controllers/bookCart";
 import verifyToken from "../middlewares/verify-token"
 
-const { addBookToCart} = bookCartController;
+const { addBookToCart } = bookCartController;
 
 const router = new Router();
 
