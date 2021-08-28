@@ -49,7 +49,6 @@ You must have
 - Mongodb(database)
 - Mongoose (ODM)
 - AWS s3 bucket
-- Travis CI
 - Coveralls
 
 ## Author
