@@ -1,4 +1,2 @@
-import "./index.spec";
-// import "./models/todo.spec";
-// import "./models/user.spec";
-import "./controllers/auth.spec.test";
+// import "./index.spec";
+import "./controllers/app.spec.test";

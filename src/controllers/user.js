@@ -8,7 +8,7 @@ import {
 import { createUser, loginUser, refreshUserToken } from '../services/user/user.service'
 
 export default class userController {
-  static async registerUsers(request, response) {
+  static async registerUsers(request, response, next) {
     try {
       const { full_name, email, password } = request.body;
       const { status, message, data } = await createUser(
@@ -69,4 +69,28 @@ export default class userController {
     }
   }
 
+  static async refreshTokenUser(request, response, next) {
+    try {
+      const { refreshedToken } = request.body;
+      const { status, data } = await refreshUserToken(refreshedToken);
+
+      if (!status) {
+        return badRequestResponse({
+          response,
+        });
+      }
+
+      return successfulResponse({
+        response,
+        data,
+      });
+  
+    } catch (error) {
+      console.log('err', error);
+      return serverErrorResponse({
+        res,
+        message: 'something went wrong',
+      });
+    }
+    }
 }

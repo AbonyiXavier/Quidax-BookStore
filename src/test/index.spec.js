@@ -6,7 +6,7 @@ chai.should();
 
 chai.use(chaiHttp);
 
-describe("/ should display Todo App API", () => {
+describe("Home page", () => {
   it("it should get the home page", (done) => {
     chai
       .request(server)
